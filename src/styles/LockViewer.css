@@ -1,0 +1,209 @@
+/* styles/LockViewer.css */
+.lock-viewer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.lock-container {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.lock-tree,
+.lock-list {
+  flex: 1;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 16px;
+  overflow: auto;
+  max-height: 400px;
+}
+
+.lock-tree h4,
+.lock-list h4 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.lock-tree-item {
+  margin-bottom: 8px;
+}
+
+.lock-node {
+  display: flex;
+  align-items: center;
+  background-color: #f5f5f5;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  padding: 8px 12px;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+.lock-node:hover {
+  background-color: #e0e0e0;
+}
+
+.lock-node.blocker {
+  background-color: #fff3e0;
+  border-color: #ffe0b2;
+}
+
+.lock-node.blocker:hover {
+  background-color: #ffe0b2;
+}
+
+.spid {
+  font-weight: 600;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.lock-info {
+  flex: 1;
+  font-size: 14px;
+}
+
+.kill-btn-small {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 12px;
+  margin-left: 8px;
+}
+
+.kill-btn-small:hover {
+  background-color: #d32f2f;
+}
+
+.locks-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.locks-table th {
+  background-color: #f5f5f5;
+  padding: 10px 12px;
+  text-align: left;
+  font-weight: 600;
+  border-bottom: 2px solid #ddd;
+}
+
+.locks-table td {
+  padding: 8px 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.locks-table tr:hover {
+  background-color: #f9f9f9;
+  cursor: pointer;
+}
+
+.locks-table tr.blocker {
+  background-color: #fff3e0;
+}
+
+.locks-table tr.blocked {
+  background-color: #f3e5f5;
+}
+
+.locks-table tr.blocker:hover {
+  background-color: #ffe0b2;
+}
+
+.locks-table tr.blocked:hover {
+  background-color: #e1bee7;
+}
+
+.no-locks,
+.no-data {
+  text-align: center;
+  padding: 16px;
+  color: #757575;
+  font-style: italic;
+}
+
+.lock-details {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.lock-details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #ddd;
+  border-radius: 4px 4px 0 0;
+}
+
+.lock-details-header h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.lock-details-content {
+  padding: 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 12px;
+}
+
+.lock-detail-item {
+  font-size: 14px;
+}
+
+.lock-detail-item strong {
+  font-weight: 600;
+}
+
+.lock-sql {
+  grid-column: 1 / -1;
+  margin-top: 8px;
+}
+
+.lock-sql strong {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.lock-sql pre {
+  background-color: #f5f5f5;
+  padding: 12px;
+  border-radius: 4px;
+  overflow-x: auto;
+  font-size: 14px;
+  line-height: 1.5;
+  border: 1px solid #eee;
+}
+
+.lock-details-footer {
+  padding: 12px 16px;
+  border-top: 1px solid #ddd;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.kill-btn-large {
+  background-color: #f44336;
+  color: white;
+  padding: 8px 16px;
+  font-size: 14px;
+}
+
+.kill-btn-large:hover {
+  background-color: #d32f2f;
+}

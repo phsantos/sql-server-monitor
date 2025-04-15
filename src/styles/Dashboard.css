@@ -1,0 +1,102 @@
+/* styles/Dashboard.css */
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0078d4;
+  color: white;
+  padding: 12px 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.connection-info {
+  display: flex;
+  align-items: center;
+}
+
+.connection-info h2 {
+  margin: 0;
+  margin-right: 24px;
+  font-size: 20px;
+}
+
+.connection-info span {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.dashboard-actions {
+  display: flex;
+  align-items: center;
+}
+
+.refresh-control {
+  display: flex;
+  align-items: center;
+  margin-right: 16px;
+}
+
+.refresh-control label {
+  margin-right: 8px;
+  font-size: 14px;
+}
+
+.refresh-control select {
+  background-color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 14px;
+}
+
+.logout-btn {
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 4px;
+  color: white;
+  padding: 6px 12px;
+  font-size: 14px;
+}
+
+.logout-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dashboard-tabs {
+  display: flex;
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #ddd;
+}
+
+.dashboard-tabs button {
+  background-color: transparent;
+  border: none;
+  color: #333;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  border-bottom: 3px solid transparent;
+  transition: all 0.2s;
+}
+
+.dashboard-tabs button:hover {
+  background-color: #e0e0e0;
+}
+
+.dashboard-tabs button.active {
+  border-bottom-color: #0078d4;
+  color: #0078d4;
+}
+
+.dashboard-content {
+  flex: 1;
+  overflow: auto;
+  padding: 16px;
+}
